@@ -14,11 +14,10 @@ class Memory extends Component {
 
     render() {
         return (
-            <div>
-            <h4>Images for '{this.state.img.img}':</h4>
-            <ul className="list-group search-results">
-                    {this.state.img.map(img => <li className="list-group-item" key={img.img}><img src={img.img} alt="Img" className="img-thumbnail" /></li>)}
-            </ul>
+            <div className="container text-center">
+                <div className="row sm-4">
+                    {this.state.img.map(img => <div key={img.img}><img src={img.img} alt="Img" className="img" /></div>)}
+                </div>
             </div>
         );
     }
