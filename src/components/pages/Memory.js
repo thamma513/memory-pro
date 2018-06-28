@@ -14,9 +14,9 @@ class Memory extends Component {
   componentDidMount() {
     this.setState({img});
   }
+  
  
   handleIncrement = () => {
-    // We always use the setState method to update a component's state
     this.setState({ score: this.state.score + 1 });
   };
 
@@ -29,7 +29,7 @@ class Memory extends Component {
             </div>
                 <div className="container text-center">
                     <div className="row sm-4">
-                        {this.state.img.map(img => <div onClick={this.handleIncrement} key={img.img}><img src={img.img} alt="Img" className="img" /></div>)}
+                        {this.state.img.map(img => <div onClick={this.handleIncrement} key={img}><img src={img.img} alt="Img" className="img" /></div>)}
                     </div>
                 </div>
         </Fragment>
