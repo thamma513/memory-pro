@@ -56,7 +56,7 @@ class Memory extends Component {
           this.setState({
             img:this.shuffleImages(imgCopy),
             score:this.state.score + 1,
-            highscore: this.state.score,
+            highscore: this.state.score +1,
             clicked: clickedArrCopy,
             winOrLose:"Correct"
           })
