@@ -1,50 +1,74 @@
 [
     {
         "name": "Angular",
-        "img" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png"
+        "img" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png",
+        "clicked" : "false",
+        "id" : 1
     },
     {
         "name":"JavaScript",
-        "img":"http://blog.addthiscdn.com/wp-content/uploads/2015/11/JS-360454.png"
+        "img":"http://blog.addthiscdn.com/wp-content/uploads/2015/11/JS-360454.png",
+        "clicked" : "false",
+        "id" : 2
     },
     {
         "name":"jQuery",
-        "img":"https://ourcodeworld.com/public-media/articles/articleocw-562bb367bbee4.png"
+        "img":"https://ourcodeworld.com/public-media/articles/articleocw-562bb367bbee4.png",
+        "clicked" : "false",
+        "id" : 3
     },
     {
         "name":"MongoDB",
-        "img":"https://cacm.acm.org/system/assets/0002/7119/042117_Theodo_MongoDB.large.jpg?1492791427&1492791427"
+        "img":"https://cacm.acm.org/system/assets/0002/7119/042117_Theodo_MongoDB.large.jpg?1492791427&1492791427",
+        "clicked" : "false",
+        "id" : 4
     },
     {
         "name":"MySQL",
-        "img":"http://images.primeagile.com/ibcs/media/image/100/100835/mysql.gif"
+        "img":"http://images.primeagile.com/ibcs/media/image/100/100835/mysql.gif",
+        "clicked" : "false",
+        "id" : 5
     },
     {
         "name":"HTML5",
-        "img":"https://sophosnews.files.wordpress.com/2014/11/html5-250.png?w=250"
+        "img":"https://sophosnews.files.wordpress.com/2014/11/html5-250.png?w=250",
+        "clicked" : "false",
+        "id" : 6
     },
     {
         "name":"CSS",
-        "img":"http://stratosprovatopoulos.com/wp-content/uploads/2014/02/Untitled-1.png"
+        "img":"http://stratosprovatopoulos.com/wp-content/uploads/2014/02/Untitled-1.png",
+        "clicked" : "false",
+        "id" : 7
     },
     {
         "name":"React",
-        "img":"https://cdn-images-1.medium.com/max/250/1*ypTuZbQNEV1oGkAfn85AUA.png"
+        "img":"https://cdn-images-1.medium.com/max/250/1*ypTuZbQNEV1oGkAfn85AUA.png",
+        "clicked" : "false",
+        "id" : 8
     },
     {
         "name":"Node",
-        "img":"https://expocodetech.com/wp-content/uploads/2014/05/node-js-small-logo-250x250.jpg"
+        "img":"https://expocodetech.com/wp-content/uploads/2014/05/node-js-small-logo-250x250.jpg",
+        "clicked" : "false",
+        "id" : 9
     },
     {
         "name":"Firebase",
-        "img":"https://koenig-media.raywenderlich.com/uploads/2016/02/5-firebase-250x250.png"
+        "img":"https://koenig-media.raywenderlich.com/uploads/2016/02/5-firebase-250x250.png",
+        "clicked" : "false",
+        "id" : 10
     },
     {
         "name":"GitHub",
-        "img":"https://timelyapp.com/static/github-929da81acbe594532795b165d9dea184-38b56.png"
+        "img":"https://timelyapp.com/static/github-929da81acbe594532795b165d9dea184-38b56.png",
+        "clicked" : "false",
+        "id" : 11
     },
     {
         "name":"AWS",
-        "img":"http://www.techsoup.org/SiteCollectionImages/Product/prod-aws-logo_Big.png"
+        "img":"http://www.techsoup.org/SiteCollectionImages/Product/prod-aws-logo_Big.png",
+        "clicked" : "false",
+        "id" : 12    
     }
 ]

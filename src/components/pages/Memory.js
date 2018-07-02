@@ -1,35 +1,134 @@
 import React, { Component, Fragment } from "react";
 import img from "../../img.json";
+import Tech from "../Tech";
 
 class Memory extends Component {
     state = {
         img: [],
-        clicked:[],
+        clicked: [],
         score: 0,
         highscore: 0
 
     }
+    shuffleImages = array => {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+        while (0 !== currentIndex) {
+    
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+      
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+      
+        return array;
+      }
 
     
   componentDidMount() {
-    this.setState({img});
+    const shuffledArr = this.shuffleImages(img)
+
+    this.setState({
+        img: shuffledArr,
+        clicked: [],
+        score: 0
+    })
   }
+  componentDidUpdate() {
+      console.log(this.state);
+  }
+
+
+
   
  
-  handleIncrement = () => {
-    this.setState({ score: this.state.score + 1 });
-  };
+//   handleIncrement = () => {
+//     this.setState({ score: this.state.score + 1 });
+//     if (this.state.score >= this.state.highscore) {
+//         this.setState({highscore: this.state.score + 1 });
+//       };
+//   };
+  handleClick = id => {
+      console.log(id);
+      if (this.state.clicked.includes(id)){
+        this.setState({
+            img,
+            score:0,
+            highscore: this.state.score,
+            clicked:[],
+            winOrLose: "Nice try you lose!"
+        })
+      } else{
+          let clickedArrCopy= this.state.clicked.slice();
+          clickedArrCopy.push(id);
+          let imgCopy= this.state.img.slice()
+          this.setState({
+            img:this.shuffleImages(imgCopy),
+            score:this.state.score + 1,
+            highscore: this.state.score,
+            clicked: clickedArrCopy,
+            winOrLose:"Correct"
+          })
+      }
+    }
+
+//     const shuffledArr = this.shuffleImages(img)
+
+//     if(this.state.clicked === -1) {
+//         this.setState({
+//             clicked: 1,
+//             img: shuffledArr,
+//             winOrLose: ''
+//         })
+//         this.increaseScore()
+//     } else {
+//         this.setState({
+//             winOrLose: 'nice try, you lose!',
+//             clicked: -1
+//         })
+//         this.componentDidMount()
+//     }
+ //}
+// increaseScore = () => {
+        
+//     if(this.state.score !== 11){
+//         this.setState({
+//             score: this.state.score + 1
+//         })
+//     } else {
+//         this.setState({
+//             score: this.state.score + 1,
+//             winOrLose: 'Goooood Job!'
+//         })
+//         this.componentDidMount()
+//     }
+    
+// }
+
+
+  
 
     render() {
         return (
         <Fragment>
             <div className="jumbotron">
             <h2>score: {this.state.score} </h2>
-            <h2>this is where the highscore goes:0</h2>
+            <h2>highscore: {this.state.highscore}</h2>
             </div>
                 <div className="container text-center">
                     <div className="row sm-4">
-                        {this.state.img.map(img => <div onClick={this.handleIncrement} key={img}><img src={img.img} alt="Img" className="img" /></div>)}
+                        {this.state.img.map(img => {
+                            return (
+                            <Tech 
+                            id={img.id} 
+                            src={img.img}
+                            handleClick={this.handleClick}
+                            />
+                            );
+                        })
+                        }
+                    
                     </div>
                 </div>
         </Fragment>
