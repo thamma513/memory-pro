@@ -39,16 +39,6 @@ class Memory extends Component {
       console.log(this.state);
   }
 
-
-
-  
- 
-//   handleIncrement = () => {
-//     this.setState({ score: this.state.score + 1 });
-//     if (this.state.score >= this.state.highscore) {
-//         this.setState({highscore: this.state.score + 1 });
-//       };
-//   };
   handleClick = id => {
       console.log(id);
       if (this.state.clicked.includes(id)){
@@ -73,38 +63,6 @@ class Memory extends Component {
       }
     }
 
-//     const shuffledArr = this.shuffleImages(img)
-
-//     if(this.state.clicked === -1) {
-//         this.setState({
-//             clicked: 1,
-//             img: shuffledArr,
-//             winOrLose: ''
-//         })
-//         this.increaseScore()
-//     } else {
-//         this.setState({
-//             winOrLose: 'nice try, you lose!',
-//             clicked: -1
-//         })
-//         this.componentDidMount()
-//     }
- //}
-// increaseScore = () => {
-        
-//     if(this.state.score !== 11){
-//         this.setState({
-//             score: this.state.score + 1
-//         })
-//     } else {
-//         this.setState({
-//             score: this.state.score + 1,
-//             winOrLose: 'Goooood Job!'
-//         })
-//         this.componentDidMount()
-//     }
-    
-// }
 
 
   
