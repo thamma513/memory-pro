@@ -1,8 +1,7 @@
-import React, {Fragment} from "react";
+import React from "react";
 
 
  const Tech = props => {
-    //  console.log(props);
      return (
         <div>
             <div onClick={()=> {props.handleClick(props.id)}} id={props.id} >
